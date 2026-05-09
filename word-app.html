@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>单词小助手 - 五年级英语下册</title>
+    <link rel="stylesheet" href="word-app.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="word-count">
+                <span id="currentWord">1</span> / <span id="totalWords">20</span>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="word-card" id="wordCard">
+                <div class="image-container">
+                    <img id="wordImage" src="" alt="单词图片">
+                    <div class="image-overlay" id="imageOverlay"></div>
+                </div>
+                
+                <div class="word-info">
+                    <div class="word" id="word">apple</div>
+                    <div class="phonetic" id="phonetic">/ˈæpl/</div>
+                </div>
+
+                <div class="meaning-section" id="meaningSection">
+                    <div class="meaning" id="meaning">苹果</div>
+                    <div class="example" id="example">I eat an apple every day.</div>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn btn-forget" id="btnForget">
+                    <span class="btn-icon">😵</span>
+                    <span class="btn-text">忘了</span>
+                </button>
+                <button class="btn btn-remember" id="btnRemember">
+                    <span class="btn-icon">😊</span>
+                    <span class="btn-text">认识</span>
+                </button>
+            </div>
+
+            <div class="show-answer" id="showAnswer">
+                <button class="btn btn-show">显示答案</button>
+            </div>
+        </main>
+
+        <div class="result-modal" id="resultModal">
+            <div class="modal-content">
+                <h2>学习完成！</h2>
+                <div class="result-stats">
+                    <div class="stat-item">
+                        <span class="stat-value" id="correctCount">0</span>
+                        <span class="stat-label">认识</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="wrongCount">0</span>
+                        <span class="stat-label">忘记</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="accuracy">0%</span>
+                        <span class="stat-label">正确率</span>
+                    </div>
+                </div>
+                <button class="btn btn-restart" id="btnRestart">再来一遍</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="word-app.js"></script>
+</body>
+</html>
